@@ -61,8 +61,8 @@ interface GigabitEthernet0/1
 exit
 
 router eigrp 1
- network 10.0.0.0 0.255.255.255
- network 20.0.0.0 0.255.255.255
+ network 10.0.0.0 
+ network 20.0.0.0 
  no auto-summary
 exit
 
@@ -93,9 +93,9 @@ interface GigabitEthernet0/2
 exit
 
 router eigrp 1
- network 20.0.0.0 0.255.255.255
- network 30.0.0.0 0.255.255.255
- network 40.0.0.0 0.255.255.255
+ network 20.0.0.0 
+ network 30.0.0.0 
+ network 40.0.0.0 
  no auto-summary
 exit
 
@@ -120,8 +120,8 @@ interface GigabitEthernet0/2
 exit
 
 router eigrp 1
- network 40.0.0.0 0.255.255.255
- network 50.0.0.0 0.255.255.255
+ network 40.0.0.0 
+ network 50.0.0.0 
  no auto-summary
 exit
 
