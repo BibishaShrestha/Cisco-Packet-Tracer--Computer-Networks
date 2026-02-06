@@ -42,12 +42,12 @@ enable
 configure terminal
 
 interface GigabitEthernet0/0
-ip address 192.168.1.1 255.255.255.0
+ip address 192.168.1.2 255.255.255.0
 no shutdown
 exit
 
 interface GigabitEthernet0/1
-ip address 192.168.2.1 255.255.255.0
+ip address 192.168.2.2 255.255.255.0
 no shutdown
 exit
 ```
@@ -57,14 +57,14 @@ exit
 # PC Configuration
 
 * PC1:
-  IP Address: 192.168.1.10
+  IP Address: 192.168.1.1
   Subnet Mask: 255.255.255.0
-  Default Gateway: 192.168.1.1
+  Default Gateway: 192.168.1.2
 
 * PC2:
-  IP Address: 192.168.2.10
+  IP Address: 192.168.2.1
   Subnet Mask: 255.255.255.0
-  Default Gateway: 192.168.2.1
+  Default Gateway: 192.168.2.2
 
 ---
 
