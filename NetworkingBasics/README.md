@@ -14,10 +14,10 @@ This project simulates a basic small network using Cisco Packet Tracer. The netw
 
 # Network Design and Layout
 
-- Router1 interface GigabitEthernet0/0 connects to Switch 1
-- Router2 interface GigabitEthernet0/1 connects to Switch 2
+- Router0 interface GigabitEthernet0/0 connects to Switch 0
+- Router1 interface GigabitEthernet0/1 connects to Switch 1
+- PC0 connects to Switch 0
 - PC1 connects to Switch 1
-- PC2 connects to Switch 2
 
 ---
 
@@ -25,10 +25,10 @@ This project simulates a basic small network using Cisco Packet Tracer. The netw
 
 | Device  | Role         | IP Address   | Subnet Mask   | Default Gateway |
 | ------  | ------------ | ------------ | ------------- | --------------- |
-| PC1     | End Device 1 | 192.168.1.1 | 255.255.255.0 | 192.168.1.2     |
-| PC2     | End Device 2 | 192.168.2.1 | 255.255.255.0 | 192.168.2.2     |
-| Router1 | Gateway      | 192.168.1.2 | 255.255.255.0 | —               |
-| Router2 | Gateway      | 192.168.2.2  | 255.255.255.0 | —               |
+| PC0     | End Device 1 | 192.168.1.1 | 255.255.255.0 | 192.168.1.2     |
+| PC1     | End Device 2 | 192.168.2.1 | 255.255.255.0 | 192.168.2.2     |
+| Router0 | Gateway      | 192.168.1.2 | 255.255.255.0 | —               |
+| Router1 | Gateway      | 192.168.2.2  | 255.255.255.0 | —               |
 
 ---
 
@@ -56,12 +56,12 @@ exit
 
 # PC Configuration
 
-* PC1:
+* PC0:
   IP Address: 192.168.1.1
   Subnet Mask: 255.255.255.0
   Default Gateway: 192.168.1.2
 
-* PC2:
+* PC1:
   IP Address: 192.168.2.1
   Subnet Mask: 255.255.255.0
   Default Gateway: 192.168.2.2
@@ -70,11 +70,11 @@ exit
 
 # Testing Connectivity
 
-* From PC1,
+* From PC0,
 - ping 192.168.1.2
 - ping 192.168.2.1
   
-* From PC2,
+* From PC1,
 -  ping 192.168.2.2
 -  ping 192.168.1.1
 
