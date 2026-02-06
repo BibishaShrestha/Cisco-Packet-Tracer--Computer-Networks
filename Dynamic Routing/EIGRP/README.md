@@ -92,7 +92,7 @@ interface GigabitEthernet0/2
  no shutdown
 exit
 
-router eigrp 100
+router eigrp 1
  network 20.0.0.0 0.255.255.255
  network 30.0.0.0 0.255.255.255
  network 40.0.0.0 0.255.255.255
@@ -119,7 +119,7 @@ interface GigabitEthernet0/2
  no shutdown
 exit
 
-router eigrp 100
+router eigrp 1
  network 40.0.0.0 0.255.255.255
  network 50.0.0.0 0.255.255.255
  no auto-summary
