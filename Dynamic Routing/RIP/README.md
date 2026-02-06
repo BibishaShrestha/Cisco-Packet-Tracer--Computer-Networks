@@ -28,17 +28,17 @@ A network with 3 routers connected in a line via GigabitEthernet interfaces, eac
 
 | Device  | Interface | IP Address | Subnet Mask   | Default Gateway |
 | ------- | --------- | ---------- | ------------- | --------------- |
-| PC0     | —         | 10.0.0.1   | 255.255.255.0 | 10.0.0.2        |
+| PC0     | —         | 100.0.0.1   | 255.255.255.0 | 100.0.0.2        |
 | Switch0 | —         | —          | —             | —               |
-| Router0 | Gig0/0    | 10.0.0.2   | 255.255.255.0 | —               |
-| Router0 | Gig0/1    | 20.0.0.1   | 255.255.255.0 | —               |
-| Router1 | Gig0/0    | 30.0.0.2   | 255.255.255.0 | —               |
-| Router1 | Gig0/1    | 20.0.0.2   | 255.255.255.0 | —               |
-| Router1 | Gig0/2    | 40.0.0.1   | 255.255.255.0 | —               |
-| Router2 | Gig0/0    | 50.0.0.2   | 255.255.255.0 | —               |
-| Router2 | Gig0/2    | 40.0.0.2   | 255.255.255.0 | —               |
-| PC1     | —         | 30.0.0.1   | 255.255.255.0 | 30.0.0.2        |
-| PC2     | —         | 50.0.0.1   | 255.255.255.0 | 50.0.0.2        |
+| Router0 | Gig0/0    | 100.0.0.2   | 255.255.255.0 | —               |
+| Router0 | Gig0/1    | 120.0.0.1   | 255.255.255.0 | —               |
+| Router1 | Gig0/0    | 130.0.0.2   | 255.255.255.0 | —               |
+| Router1 | Gig0/1    | 120.0.0.2   | 255.255.255.0 | —               |
+| Router1 | Gig0/2    | 140.0.0.1   | 255.255.255.0 | —               |
+| Router2 | Gig0/0    | 150.0.0.2   | 255.255.255.0 | —               |
+| Router2 | Gig0/2    | 140.0.0.2   | 255.255.255.0 | —               |
+| PC1     | —         | 130.0.0.1   | 255.255.255.0 | 130.0.0.2        |
+| PC2     | —         | 150.0.0.1   | 255.255.255.0 | 150.0.0.2        |
 
 ---
 
@@ -51,19 +51,19 @@ enable
 configure terminal
 
 interface GigabitEthernet0/0
- ip address 10.0.0.2 255.255.255.0
+ ip address 100.0.0.2 255.255.255.0
  no shutdown
 exit
 
 interface GigabitEthernet0/1
- ip address 20.0.0.1 255.255.255.0
+ ip address 120.0.0.1 255.255.255.0
  no shutdown
 exit
 
 router rip
  version 2
- network 10.0.0.0
- network 20.0.0.0
+ network 100.0.0.0
+ network 120.0.0.0
 exit
 
 ```
@@ -77,25 +77,25 @@ enable
 configure terminal
 
 interface GigabitEthernet0/0
- ip address 30.0.0.2 255.255.255.0
+ ip address 130.0.0.2 255.255.255.0
  no shutdown
 exit
 
 interface GigabitEthernet0/1
- ip address 20.0.0.2 255.255.255.0
+ ip address 120.0.0.2 255.255.255.0
  no shutdown
 exit
 
 interface GigabitEthernet0/2
- ip address 40.0.0.1 255.255.255.0
+ ip address 140.0.0.1 255.255.255.0
  no shutdown
 exit
 
 router rip
  version 2
- network 20.0.0.0
- network 30.0.0.0
- network 40.0.0.0
+ network 120.0.0.0
+ network 130.0.0.0
+ network 140.0.0.0
 exit
 
 ```
@@ -109,19 +109,19 @@ enable
 configure terminal
 
 interface GigabitEthernet0/0
- ip address 50.0.0.2 255.255.255.0
+ ip address 150.0.0.2 255.255.255.0
  no shutdown
 exit
 
 interface GigabitEthernet0/2
- ip address 40.0.0.2 255.255.255.0
+ ip address 140.0.0.2 255.255.255.0
  no shutdown
 exit
 
 router rip
  version 2
- network 40.0.0.0
- network 50.0.0.0
+ network 140.0.0.0
+ network 150.0.0.0
 exit
 
 ```
@@ -132,9 +132,9 @@ exit
 
 | PC  | IP Address | Subnet Mask   | Default Gateway |
 | --- | ---------- | ------------- | --------------- |
-| PC0 | 10.0.0.1   | 255.255.255.0 | 10.0.0.2        |
-| PC1 | 30.0.0.1   | 255.255.255.0 | 30.0.0.2        |
-| PC2 | 50.0.0.1   | 255.255.255.0 | 50.0.0.2        |
+| PC0 | 100.0.0.1   | 255.255.255.0 | 100.0.0.2        |
+| PC1 | 130.0.0.1   | 255.255.255.0 | 130.0.0.2        |
+| PC2 | 150.0.0.1   | 255.255.255.0 | 150.0.0.2        |
 
 ---
 
@@ -149,8 +149,8 @@ From **any PC**, test pinging:
 Example from **PC0**:
 
 ```bash
-ping 10.0.0.2
-ping 20.0.0.1
-ping 30.0.0.1
-ping 50.0.0.1
+ping 100.0.0.2
+ping 120.0.0.1
+ping 130.0.0.1
+ping 150.0.0.1
 ```
