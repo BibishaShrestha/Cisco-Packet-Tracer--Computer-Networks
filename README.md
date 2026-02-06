@@ -2,7 +2,7 @@
 Simulation of Interactive Networks
 
 Includes:
-1. Coomunication between PCs and networks
+1. Communication between PCs and networks
 2. Static Routing
 3. Dynamic Routing: i) EIGRP: Enhanced Interior Gateway Routing Protocol
                    ii) RIP: Routing Information Protocol
