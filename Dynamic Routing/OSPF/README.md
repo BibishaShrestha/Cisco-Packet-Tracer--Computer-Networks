@@ -43,7 +43,7 @@ This network demonstrates **OSPF dynamic routing** with three routers, each conn
 
 ---
 
-## 🔧 Router Configurations (OSPF)
+## Router Configurations (OSPF)
 
 ### Router0
 
@@ -168,11 +168,3 @@ ping 192.168.3.1
 ```
 
 All successful pings confirm **OSPF is working** and all networks are reachable.
-
-
----
-
-If you want, I can also **draw a clean Packet Tracer topology diagram** for this exact setup — it would be ready to implement.
-
-Do you want me to make that diagram?
-
