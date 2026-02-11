@@ -11,7 +11,7 @@ This project demonstrates a network where a PC can access multiple websites via 
 
 ---
 
-## 🛠 Devices and Interfaces
+## Devices and Interfaces
 
 | Device     | Role             | Interface | Connected To     | IP Address   | Subnet Mask   | Default Gateway |
 | ---------- | ---------------- | --------- | ---------------- | ------------ | ------------- | --------------- |
@@ -48,7 +48,7 @@ exit
 
 ---
 
-## 🔧 DNS Server Configuration
+## DNS Server Configuration
 
 * IP: **10.10.10.10**
 * Default Gateway: **10.10.10.1**
@@ -64,7 +64,7 @@ exit
 
 ---
 
-## 🔧 HTTP Server Configuration (Google, Gmail, Facebook, Instagram)
+## HTTP Server Configuration (Google, Gmail, Facebook, Instagram)
 
 * Enable **HTTP service** in Packet Tracer
 * Customize `index.html` on each server:
