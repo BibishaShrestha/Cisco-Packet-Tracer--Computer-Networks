@@ -135,12 +135,3 @@ ping 192.168.1.105  # Example: PC1 ping PC4
 ping 192.168.1.106  # Example: PC2 ping PC5
 ```
 
----
- This setup now includes:
-
-* **Two switches with identical VLAN configurations**
-* **Access ports assigned to VLANs**
-* **Trunk port connecting switches**
-* **DHCP server providing dynamic IPs for all VLANs**
-* **Ready-to-implement in Packet Tracer**
-
